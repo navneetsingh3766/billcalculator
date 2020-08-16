@@ -88,13 +88,19 @@ addItemInput.addEventListener("keypress", function(event){
 submitButton.addEventListener("click", function(){
     if(addItemInput.value.length > 0){
         if(checkBox.checked){
+            priceChange(priceWithoutGST(roundedPrice(addItemInput.value)));
+            if(document.getElementById("loss")){
+                document.getElementById("loss").remove();
+            }
+            checkingSelectedModel(priceWithoutGST(roundedPrice(addItemInput.value)));
+            addItemInput.value = "";
             console.log("checked" )
         } else if(!checkBox.checked){
             priceChange(addItemInput.value)
         if(document.getElementById("loss")){
             document.getElementById("loss").remove();
         }
-        checkingSelectedModel();
+        checkingSelectedModel(addItemInput.value);
         addItemInput.value = "";
         }
     }
