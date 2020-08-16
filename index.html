@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Price</title>
+    <style>
+        body{
+            background-color: yellow;
+            text-align: center;
+            }
+        li{
+            list-style: none;
+            margin: 10px;
+        }
+        .editButton{
+            margin-left: 10px;
+        }
+        .deletedButton{
+            margin-left: 10px;
+        }
+        .leftside{
+            display: inline;
+            margin-right: 20px;
+
+        }
+        .rightside{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <h1>Bill Calculator</h1>
+        <select id="list" name="model" required>
+            <option value="1Lblack" selected>1 Liter (Black)</option>
+            <option value="1Lss">1 Liter (SS)</option>
+            <option value="2L">2 Liter (ss)</option>
+            <option value="5L">5 Liter (ss)</option>
+        </select>
+        <input id="inputPrice" type="number" placeholder="Price Without GST" required>
+        <input type="checkbox" name="withGST" id="checkBox">
+        <label for="withGST">Rate With GST</label>
+        <button id="submit">Get Bill</button>
+        <ul id="ul">
+            <li><p class="leftside">Price Without GST :- </p>
+                <p class="rightside" id="rawPrice">0.00</p>
+            </li>
+            <li><p class="leftside">GST 18%:- </p>
+                <p class="rightside" id="gst">0.00</p>
+            </li>
+            <hr>
+            <li><b><p class="leftside">Paid Price :- </p>
+                <p class="rightside" id="finalPrice">0.00</p>
+            </b>
+            </li>
+            <hr>
+        </ul>
+    
+        <script src="./script.js"></script>
+    </body>
+</body>
+</html>
