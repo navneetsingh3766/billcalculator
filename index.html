@@ -38,12 +38,25 @@
             <option value="2L">2 Liter (ss)</option>
             <option value="5L">5 Liter (ss)</option>
         </select>
+        <!-- piece -->
+        <select id="piece" name="piece" required>
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
         <input id="inputPrice" type="number" placeholder="Price" required>
         <input type="checkbox" name="withGST" id="checkBox">
         <label for="withGST">Price With GST</label>
         <button id="submit">Get Bill</button>
         <ul id="ul">
-            <li><p class="leftside">Price Without GST :- </p>
+            <li><p class="leftside" id="pricePera">Price Without GST :- </p>
                 <p class="rightside" id="rawPrice">0.00</p>
             </li>
             <li><p class="leftside">GST 18%:- </p>
